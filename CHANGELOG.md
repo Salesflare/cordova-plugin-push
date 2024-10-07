@@ -1,5 +1,32 @@
 # Change Log
 
+## 4.0.0
+
+**Breaking:**
+
+- feat(android)!: bump platform requirement cordova-android>=12.0.0 (#243)
+- feat!(ios): update Firebase Messaging to ~> 8.1.1 (#152)
+- fix(windows)!: remove deprecated platform (#245)
+
+**Features:**
+
+- feat(android): bump gradle plugin kotlin to 1.7.21 (#246)
+- feat(android): bump GradlePluginGoogleServicesVersion to 4.3.15 (match w/ Cordova-Android@12.x) (#244)
+- feat(android): support targetSdkVersion >= 31 (Android 12) (#185)
+
+**Fixes:**
+
+- fix(ios): callback not called when foreground is true #101 (#102)
+- fix(android): deprecated warning Html.fromHtml (#230)
+- fix(android): Ask for POST_NOTIFICATIONS permission if necessary (#238)
+- fix(android): PushHandlerActivity permissions regression (#183)
+
+**Others:**
+
+- dep: resolve audit with rebuilt package-lock & rebuilt push.js with new packages (#248)
+- dep(npm): bump all devDependencies (#241)
+- ci: bump github action workflow and dependencies (#242)
+
 ## 3.0.1
 
 **Fixes:**

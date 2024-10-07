@@ -221,20 +221,17 @@ declare namespace PhonegapPluginPush {
 			 */
 			categories?: CategoryArray
 			/**
-			 * Whether to use prod or sandbox GCM setting. Defaults to false.
+			 * If `true` the device can show up critical alerts. (Possible since iOS 12 with a special entitlement)
+			 * Default is false|"false".
+       * Note: the value you set this option to the first time you call the init method will be how the application always acts.
+       * Once this is set programmatically in the init method it can only be changed manually by the user in Settings > Notifications > `App Name`.
+       * This is normal iOS behaviour.
 			 */
-			fcmSandbox?: boolean
+			critical?: boolean
 			/**
 			 * If the array contains one or more strings each string will be used to subscribe to a FcmPubSub topic. Defaults to [].
 			 */
 			topics?: string[]
-		}
-
-		/**
-		 * Windows specific initialization options.
-		 */
-		windows?: {
-
 		}
 	}
 
@@ -273,7 +270,6 @@ declare namespace PhonegapPluginPush {
 		title?: string
 		/**
 		 * The number of messages to be displayed in the badge iOS or message count in the notification shade in Android.
-		 * For windows, it represents the value in the badge notification which could be a number or a status glyph.
 		 */
 		count: string
 		/**

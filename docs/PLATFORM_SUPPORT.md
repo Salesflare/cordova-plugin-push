@@ -1,5 +1,12 @@
 ## Supported Platforms
 
+### Version 4.x.x
+
+- Cordova CLI (10.0.0 or newer)
+- Android (`cordova-android` 12.0.0 or higher)
+- Browser
+- iOS (`cordova-ios` 6.0.0 or higher)
+
 ### Version 3.x.x
 
 - Cordova CLI (10.0.0 or newer)
