@@ -62,28 +62,28 @@
             [self registerWithToken: token];
         }
     }];
-    [[FIRInstanceID instanceID] instanceIDWithHandler:^(FIRInstanceIDResult * _Nullable result, NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"Error fetching remote instance ID: %@", error);
-        } else {
-            NSLog(@"Remote instance ID (FCM Registration) Token: %@", result.token);
+    // [[FIRInstanceID instanceID] instanceIDWithHandler:^(FIRInstanceIDResult * _Nullable result, NSError * _Nullable error) {
+    //     if (error != nil) {
+    //         NSLog(@"Error fetching remote instance ID: %@", error);
+    //     } else {
+    //         NSLog(@"Remote instance ID (FCM Registration) Token: %@", result.token);
 
-            [self setFcmRegistrationToken: result.token];
+    //         [self setFcmRegistrationToken: result.token];
 
-            NSString* message = [NSString stringWithFormat:@"Remote InstanceID token: %@", result.token];
+    //         NSString* message = [NSString stringWithFormat:@"Remote InstanceID token: %@", result.token];
 
-            id topics = [self fcmTopics];
-            if (topics != nil) {
-                for (NSString *topic in topics) {
-                    NSLog(@"subscribe to topic: %@", topic);
-                    id pubSub = [FIRMessaging messaging];
-                    [pubSub subscribeToTopic:topic];
-                }
-            }
+    //         id topics = [self fcmTopics];
+    //         if (topics != nil) {
+    //             for (NSString *topic in topics) {
+    //                 NSLog(@"subscribe to topic: %@", topic);
+    //                 id pubSub = [FIRMessaging messaging];
+    //                 [pubSub subscribeToTopic:topic];
+    //             }
+    //         }
 
-            [self registerWithToken:result.token];
-        }
-    }];
+    //         [self registerWithToken:result.token];
+    //     }
+    // }];
 }
 
 //  FCM refresh token
