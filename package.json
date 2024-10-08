@@ -1,6 +1,6 @@
 {
   "name": "@salesflare/cordova-plugin-push",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "Register and receive push notifications.",
   "scripts": {
     "build": "babel src/js --out-dir www",
